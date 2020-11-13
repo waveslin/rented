@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Graduate&family=Open+Sans+Condensed:ital,wght@1,300&family=Quicksand&display=swap');
+
+.contact-header {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-header h1{
+    width: 95%;
+    text-align: center;
+    border-bottom: 2px solid #eeeeff;
+}
+
+section.contact{
+    width: 100%;
+    min-height: 50vh;
+    margin: 0;
+    padding: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-text,
+.contact-map{
+    width: 40%;
+    min-height: 30em;
+}
+
+.contact-detail{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    margin: 1em;
+    padding: 1em;
+    border: 0.1px solid #c2c2c2;
+    font-size: 1em;
+}
+
+.contact-detail h2{
+    font-family: 'Graduate', cursive;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.first-line{
+    margin-bottom: 0;
+}
+
+.second-line{
+    padding-left: 5em;
+    margin-top: 0;
+}
+
+.detail-name{
+    font-weight: 700;
+    margin: 0 0.5em;
+}
+
+.contact-map{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-map img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 775px){
+    section.contact{
+        flex-direction: column;
+    }
+
+    .contact-text,
+    .contact-map{
+    width: 100%;
+    height: 20em;
+    margin: 2em;
+    }
+
+    .contact-detail{
+        font-size: 0.9em;
+    }
+}
