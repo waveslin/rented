@@ -1,8 +1,13 @@
 import './Footer.css';
+import {useVisibility} from '../context/Visibility.jsx'
+
 
 const Footer = ()=>{
+
+    const toggle = useVisibility();
+
     return (
-        <footer>
+        <footer className={`${toggle ? '' : 'footer-hide'}`}>
             <div className="footer-section" id="footer" data-test='Footer-footer'>
                 <div>
                     <i className="fab fa-cc-visa" data-test='payment-icon'></i>

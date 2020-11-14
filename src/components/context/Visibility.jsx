@@ -39,9 +39,9 @@ export function VisibilityProvider({children}){
     }
 
     return (
-        <VisibilityContext.Provider value={visible}>
-            <VisibilityUpdateContext.Provider value={toggleVisible}>
-                <VisibilityResetContext.Provider value={resetVisible}>
+        <VisibilityContext.Provider value={visible} data-test='Visibility-provider-visible'>
+            <VisibilityUpdateContext.Provider value={toggleVisible} data-test='Visibility-provider-setVisible'>
+                <VisibilityResetContext.Provider value={resetVisible} data-test='Visibility-provider-resetVisible'>
                     {children}
                 </VisibilityResetContext.Provider>
             </VisibilityUpdateContext.Provider>
