@@ -1,7 +1,7 @@
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {VisibilityProvider} from './components/context/Visibility.jsx'
-import Navigation from './components/Navigation/Navigation.jsx'
+import Navigation from './components/navigation/Navigation.jsx'
 import Home from './components/home/Home.jsx';
 import Contact from './components/contact/Contact.jsx'
 import Signup from './components/signup/Signup.jsx'
