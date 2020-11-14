@@ -12,15 +12,15 @@ const App = ()=> {
   return (
     <>
       <VisibilityProvider>
-        <Router>
-          <Navigation />
-          <Switch>
+        <Router data-test='App-router'>
+          <Navigation data-test='App-navigation' />
+          <Switch data-test='App-url-switch' >
             <Route exact path='/' component={Home}/>
             <Route exact path='/contact' component={Contact}/>
             <Route exact path='/signup' component={Signup}/>
             <Route exact path='/login' component={Login}/>
           </Switch>
-          <Footer />
+          <Footer data-test='App-footer' />
         </Router>
       </VisibilityProvider>
     </>
