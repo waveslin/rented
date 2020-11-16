@@ -17,8 +17,25 @@ describe('Dashboard Test', ()=>{
         component = setup()
     });
 
-    it('Dashboard component success', ()=>{
-        // let sample = findByDataTest(component, 'success');
-        expect(1).toBe(1);
-    })
+    
+
+    it('Dashboard component has a main header', ()=>{
+        let sample = findByDataTest(component, 'Dashboard-header');
+        expect(sample.length).toBe(1);
+    });
+
+    it('Dashboard component has subheading for inquiry and history', ()=>{
+        let sample = findByDataTest(component, 'Dashboard-subheading');
+        expect(sample.length).toBe(2);
+    });
+
+    it('Dashboard component has section for inquiry', ()=>{
+        let sample = findByDataTest(component, 'Dashboard-inquiry');
+        expect(sample.length).toBe(1);
+    });
+
+    it('Dashboard component has section for history', ()=>{
+        let sample = findByDataTest(component, 'Dashboard-history');
+        expect(sample.length).toBe(1);
+    });
 })

@@ -16,7 +16,7 @@ const Footer = ()=>{
                     <i className="fab fa-cc-paypal"  data-test='payment-icon'></i>
                 </div>
                 <p>
-                    © 2020 Rented All Rights Reserved <a href="#footer">Terms of use</a> | <a href="#footer"> Privacy Policy</a>
+                    © 2020 Rented All Rights Reserved <a href="#footer1">Terms of use</a> | <a href="#footer2"> Privacy Policy</a>
                 </p>
             </div>
         </footer>

@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+section.pagenotfound{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    color: #302f2f;
+    font-family: 'Bungee', cursive;
+    font-size: 7vmin;
+}

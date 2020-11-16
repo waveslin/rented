@@ -7,6 +7,8 @@ import Contact from './components/contact/Contact.jsx'
 import Signup from './components/signup/Signup.jsx'
 import Login from './components/login/Login.jsx';
 import Footer from './components/footer/Footer.jsx'
+import Dashboard from './components/dashboard/Dashboard.jsx';
+import PageNotFound from './components/404/PageNotFound.jsx';
 
 const App = ()=> {
   return (
@@ -19,6 +21,8 @@ const App = ()=> {
             <Route exact path='/contact' component={Contact}/>
             <Route exact path='/signup' component={Signup}/>
             <Route exact path='/login' component={Login}/>
+            <Route exact path='/dashboard' component={Dashboard} />
+            <Route path='/' component={PageNotFound} />
           </Switch>
           <Footer data-test='App-footer' />
         </Router>

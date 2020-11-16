@@ -1,7 +1,7 @@
 import './Payment.css';
 
 
-const Payment = () => {
+const Payment = (props) => {
     return (
         <>
 

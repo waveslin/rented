@@ -1,6 +1,6 @@
 import './Account.css';
 
-const Account = () => {
+const Account = (props) => {
     return (
         <>
 
