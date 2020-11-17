@@ -26,17 +26,17 @@ const Dashboard = (props) => {
                 <div className="history-download">
                     <div className="history-record">
                         <p className="record-month-year">Sep 2020</p>
-                        <a href="#1">download</a>
+                        <a href="#1">view</a>
                     </div>
 
                     <div className="history-record">
                         <p className="record-month-year">Aug 2020</p>
-                        <a href="#2">download</a>
+                        <a href="#2">view</a>
                     </div>
 
                     <div className="history-record">
                         <p className="record-month-year">Jul 2020</p>
-                        <a href="#3">download</a>
+                        <a href="#3">view</a>
                     </div>
                 </div>
             </section>

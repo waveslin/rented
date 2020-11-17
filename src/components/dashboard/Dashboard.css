@@ -160,7 +160,7 @@ section.dashboard-history .dashboard-heading{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5em;
+    padding: 0.5em 1.5em;
     height: 70%;
     box-sizing: border-box;
     font-family: 'Staatliches', cursive;

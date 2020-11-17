@@ -7,10 +7,10 @@ const Signup = ()=>{
 
     return (
         <>
-        <header className="login" data-test='Signup-header'>
+        <header className="signup" data-test='Signup-header'>
             <h1><i className="fas fa-sign-in-alt"></i> Sign Up</h1>
         </header>
-        <section className="login">
+        <section className="signup">
             <form action="" data-test='Signup-form'>
                 <div className={`login-input${hide ? '': ' hide-input'}`}>
                     <input type="email" name="email" id="email"  placeholder="E-mail"/>
