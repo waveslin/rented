@@ -1,4 +1,5 @@
 import './Navigation.css';
+import {useState} from 'react';
 import {Link} from'react-router-dom';
 import {useVisibility, useVisibilityUpdate, useVisibilityReset} from '../context/Visibility.jsx'
 
@@ -7,7 +8,31 @@ const Navigation = ()=> {
     const toggle = useVisibility();
     const setToggle = useVisibilityUpdate();
     const resetToggle = useVisibilityReset();
-    // className={`nav-logo${toggle ? '':' menu-logo'}`}
+
+    const [auth, setAuth] = useState(true);
+    const resetAuth = () => { setAuth(false); resetToggle();}
+   
+    const links = (props) =>{
+        if(props){
+            return (
+                <>
+                    <li><Link to='/dashboard' onClick={resetToggle}>Dashboard</Link></li>
+                    <li><Link to='/payment' onClick={resetToggle}>Payment</Link></li>
+                    <li><Link to='/account' onClick={resetToggle}>Account</Link></li>
+                    <li><Link to='/' onClick={resetAuth} >Log out</Link></li>
+                </>
+            );
+        }
+        return (
+            <>
+                <li><Link to='/' onClick={resetToggle}>Home</Link></li>
+                <li><Link to='/contact' onClick={resetToggle}>Contact</Link></li>
+                <li><Link to='/signup' onClick={resetToggle}>Sign up</Link></li>
+                <li><Link to='/login' onClick={resetToggle}>Log in</Link></li>
+            </>
+        );
+    }
+
     return (
         <nav data-test='Navigation-nav'>
             <div className='nav-logo' data-test='logo-img'>
@@ -24,10 +49,7 @@ const Navigation = ()=> {
                 <i className="fas fa-times-circle"></i>
             </button>
             <ul className={`nav-list${toggle ? ' hide' : ' show'}`} id="menu" data-test='Navigation-link-list'>
-                <li><Link to='/' onClick={resetToggle}>Home</Link></li>
-                <li><Link to='/contact' onClick={resetToggle}>Contact</Link></li>
-                <li><Link to='/signup' onClick={resetToggle}>Sign up</Link></li>
-                <li><Link to='/login' onClick={resetToggle}>Log in</Link></li>
+                {links(auth)}
             </ul>
         </nav>
     );
