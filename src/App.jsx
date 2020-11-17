@@ -16,14 +16,16 @@ const App = ()=> {
       <VisibilityProvider>
         <Router data-test='App-router'>
           <Navigation data-test='App-navigation' />
-          <Switch data-test='App-url-switch' >
-            <Route exact path='/' component={Home}/>
-            <Route exact path='/contact' component={Contact}/>
-            <Route exact path='/signup' component={Signup}/>
-            <Route exact path='/login' component={Login}/>
-            <Route exact path='/dashboard' component={Dashboard} />
-            <Route path='/' component={PageNotFound} />
-          </Switch>
+          <section className='App-section'>
+            <Switch data-test='App-url-switch' >
+              <Route exact path='/' component={Home}/>
+              <Route exact path='/contact' component={Contact}/>
+              <Route exact path='/signup' component={Signup}/>
+              <Route exact path='/login' component={Login}/>
+              <Route exact path='/dashboard' component={Dashboard} />
+              <Route path='/' component={PageNotFound} />
+            </Switch>
+          </section>
           <Footer data-test='App-footer' />
         </Router>
       </VisibilityProvider>

@@ -35,22 +35,24 @@ const Navigation = ()=> {
 
     return (
         <nav data-test='Navigation-nav'>
-            <div className='nav-logo' data-test='logo-img'>
-                <Link to='/' onClick={resetToggle}>
-                    <img src="rented-logo.png" alt=""/>
-                </Link>
-            </div>
+            <section className="nav-content">
+                <div className='nav-logo' data-test='logo-img'>
+                    <Link to='/' onClick={resetToggle}>
+                        <img src="rented-logo.png" alt=""/>
+                    </Link>
+                </div>
 
-            <button className={`nav-toggle toggle-icon sm-menu${toggle? '': ' hide'}`} id="toggle_icon" data-menu="menu" onClick={setToggle} data-test='Navigation-menu-toggle'>
-                <i className="fas fa-bars"></i>
-            </button>
+                <button className={`nav-toggle toggle-icon sm-menu${toggle? '': ' hide'}`} id="toggle_icon" data-menu="menu" onClick={setToggle} data-test='Navigation-menu-toggle'>
+                    <i className="fas fa-bars"></i>
+                </button>
 
-            <button className={`menu-exit toggle-icon${toggle ? ' hide' : ' show'}`} onClick={setToggle} data-test='Navigation-menu-close'>
-                <i className="fas fa-times-circle"></i>
-            </button>
-            <ul className={`nav-list${toggle ? ' hide' : ' show'}`} id="menu" data-test='Navigation-link-list'>
-                {links(auth)}
-            </ul>
+                <button className={`menu-exit toggle-icon${toggle ? ' hide' : ' show'}`} onClick={setToggle} data-test='Navigation-menu-close'>
+                    <i className="fas fa-times-circle"></i>
+                </button>
+                <ul className={`nav-list${toggle ? ' hide' : ' show'}`} id="menu" data-test='Navigation-link-list'>
+                    {links(auth)}
+                </ul>
+            </section>
         </nav>
     );
 }
