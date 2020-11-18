@@ -65,7 +65,7 @@ section.signup{
     border: none;
     outline: none;
     width: 90%;
-    height: 5em;
+    height: 4em;
     padding-left: 10px;
     margin: 0;
     box-sizing: border-box;
@@ -109,7 +109,7 @@ section.signup{
 .signup-combine-input>input,
 .signup-combine-input>select{
     width: 100%;
-    height: 2em;
+    height: 2.5em;
     margin: 0.5em 0;
     box-sizing: border-box;
     border: 2px solid #585858;
@@ -127,11 +127,18 @@ section.signup{
     box-sizing: border-box;
     font-family: 'Kanit', sans-serif;
     font-size: 2em;
-    color: #afc2eb;
-    background-color: #2e6bf0;
-    border: 0.1px solid #afc2eb;
+    color: #c5d0e9;
+    background-color: #1f65fd;
+    border: 1px solid #becce9;
     border-radius: 5px;
     font-size: 2em;
+    transition: color 100ms ease-out, background-color 100ms ease-in;
+}
+
+.signup form>button:hover{
+    color: #f4f6fc;
+    background-color: #1256e9;
+    border: 1px solid  #d4e1ff;
 }
 
 @media screen and (max-width: 757px){
