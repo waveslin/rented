@@ -9,7 +9,7 @@ const Navigation = ()=> {
     const setToggle = useVisibilityUpdate();
     const resetToggle = useVisibilityReset();
 
-    const [auth, setAuth] = useState(true);
+    const [auth, setAuth] = useState(false);
     const resetAuth = () => { setAuth(false); resetToggle();}
    
     const links = (props) =>{

@@ -17,7 +17,7 @@ describe('Payment Test', ()=>{
         component = setup()
     });
 
-    it('Payment component success', ()=>{
+    it('Payment component ', ()=>{
         // let sample = findByDataTest(component, 'success');
         expect(1).toBe(1);
     })
