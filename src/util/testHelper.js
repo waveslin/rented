@@ -1,5 +1,5 @@
-import checkPropTypes from 'check-prop-types';
-import { Component } from 'react';
+
+
 
 
 export const findByDataTest = (component, data_test) => {

@@ -21,7 +21,7 @@ describe('Navigation Test', ()=>{
     });
 
 
-    it('Navigation has the link list ', ()=>{
+    it('Navigation has the link list', ()=>{
         let sample = findByDataTest(component, 'Navigation-link-list');
         expect(sample.length).toBe(1);
     });

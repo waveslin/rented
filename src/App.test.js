@@ -2,7 +2,6 @@ import App from './App.jsx';
 import Adaptor from 'enzyme-adapter-react-16';
 import {shallow, configure} from 'enzyme';
 import {findByDataTest} from './util/testHelper';
-import { BrowserRouter } from 'react-router-dom';
 
 configure({adapter: new Adaptor()});
 

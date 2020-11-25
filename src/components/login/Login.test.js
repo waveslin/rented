@@ -1,6 +1,6 @@
 import Login from './Login.jsx';
 import Adaptor from 'enzyme-adapter-react-16';
-import {shallow, enzyme, configure} from 'enzyme';
+import {shallow, configure} from 'enzyme';
 import {findByDataTest} from '../../util/testHelper';
 
 configure({adapter: new Adaptor()});
