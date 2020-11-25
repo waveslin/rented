@@ -8,7 +8,8 @@ import Signup from './components/signup/Signup.jsx'
 import Login from './components/login/Login.jsx';
 import Footer from './components/footer/Footer.jsx'
 import Dashboard from './components/dashboard/Dashboard.jsx';
-import Account from './components/account/Account.jsx'
+import Payment from './components/payment/Payment.jsx';
+import Account from './components/account/Account.jsx';
 import PageNotFound from './components/404/PageNotFound.jsx';
 
 const App = ()=> {
@@ -19,11 +20,12 @@ const App = ()=> {
           <Navigation data-test='App-navigation' />
           <section className='App-section'>
             <Switch data-test='App-url-switch' >
-              <Route exact path='/' component={Home}/>
-              <Route exact path='/contact' component={Contact}/>
-              <Route exact path='/signup' component={Signup}/>
-              <Route exact path='/login' component={Login}/>
+              <Route exact path='/' component={Home} />
+              <Route exact path='/contact' component={Contact} />
+              <Route exact path='/signup' component={Signup} />
+              <Route exact path='/login' component={Login} />
               <Route exact path='/dashboard' component={Dashboard} />
+              <Route exact path='/payment' component={Payment} />
               <Route exact path='/account' component={Account} />
               <Route path='/' component={PageNotFound} />
             </Switch>

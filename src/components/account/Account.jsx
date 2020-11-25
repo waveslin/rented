@@ -1,6 +1,12 @@
 import './Account.css';
+import {useState} from 'react';
 
 const Account = (props) => {
+
+    const [disable, setDisable] = useState(true);
+
+    const toggleDisable = () => {setDisable(!disable);}
+
     return (
         <>
             <header className='account-header' data-test='Account-header'>
@@ -12,7 +18,7 @@ const Account = (props) => {
                     <form action="">
                         <div className="info-field-group">
                             <label htmlFor="email">Email Address</label>
-                            <input type="email" name="email" id="email" value="sample@gmail.com" disabled/>
+                            <input type="email" name="email" id="email" value="sample@gmail.com" disabled={disable}/>
                         </div>
                         <div className="info-field-group">
                             <label htmlFor="account">Rented Account</label>
@@ -20,11 +26,11 @@ const Account = (props) => {
                         </div>
                         <div className="info-field-group">
                             <label htmlFor="firstname">First Name</label>
-                            <input type="text" name="firstname" id="firstname" value="Joe" disabled/>
+                            <input type="text" name="firstname" id="firstname" value="Joe" disabled={disable}/>
                         </div>
                         <div className="info-field-group">
                             <label htmlFor="lastname">Last Name</label>
-                            <input type="text" name="lastname" id="lastname" value="Divade" disabled/>
+                            <input type="text" name="lastname" id="lastname" value="Divade" disabled={disable}/>
                         </div>
                         <div className="info-field-group">
                             <label htmlFor="date">Create Date</label>
@@ -38,7 +44,8 @@ const Account = (props) => {
                             <label htmlFor="address">Apartment Address</label>
                             <input type="text" name="address" id="address" value="4450 Rue Saint Fanc, Montreal, Quebec, Canada H2K 2C0" disabled/>
                         </div>
-                        <button>Edit</button>
+                        <button onClick={toggleDisable} disabled={!disable}>Edit</button>
+                        <button onClick={toggleDisable} disabled={disable}>Save</button>
                     </form>
                 </fieldset>
             </section>

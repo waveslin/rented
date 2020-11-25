@@ -17,8 +17,13 @@ describe('Payment Test', ()=>{
         component = setup()
     });
 
-    it('Payment component ', ()=>{
-        // let sample = findByDataTest(component, 'success');
-        expect(1).toBe(1);
-    })
+    it('Payment component has a header', ()=>{
+        let sample = findByDataTest(component, 'Payment-header');
+        expect(sample.length).toBe(1);
+    });
+
+    it('Payment component has a payment method section', ()=>{
+        let sample = findByDataTest(component, 'Payment-method');
+        expect(sample.length).toBe(1);
+    });
 })
