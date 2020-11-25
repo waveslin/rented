@@ -3,7 +3,7 @@ import {useState} from 'react';
 import {Link} from'react-router-dom';
 import {useVisibility, useVisibilityUpdate, useVisibilityReset} from '../context/Visibility.jsx'
 
-const Navigation = ()=> {
+const Navigation = () => {
 
     const toggle = useVisibility();
     const setToggle = useVisibilityUpdate();
