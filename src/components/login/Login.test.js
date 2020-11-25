@@ -17,28 +17,28 @@ describe('Login Test', ()=>{
     });
 
 
-    it('Login has a header ', ()=>{
+    it('Login has a header', ()=>{
         let sample = findByDataTest(component, 'Login-header');
         expect(sample.length).toBe(1);
     });
 
 
-    it('Login has a login form ', ()=>{
+    it('Login has a login form', ()=>{
         let sample = findByDataTest(component, 'Login-form');
         expect(sample.length).toBe(1);
     });
 
-    it('Login has a email/username input place ', ()=>{
+    it('Login has a email/username input place', ()=>{
         let sample = findByDataTest(component, 'Login-input-email');
         expect(sample.length).toBe(1);
     });
 
-    it('Login has a password input place ', ()=>{
+    it('Login has a password input place', ()=>{
         let sample = findByDataTest(component, 'Login-input-password');
         expect(sample.length).toBe(1);
     });
 
-    it('Login has a login button ', ()=>{
+    it('Login has a login button', ()=>{
         let sample = findByDataTest(component, 'Login-login-button');
         expect(sample.length).toBe(1);
     });
