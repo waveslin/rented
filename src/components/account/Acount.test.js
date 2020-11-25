@@ -17,8 +17,18 @@ describe('Account Test', ()=>{
         component = setup()
     });
 
-    it('Account component success', ()=>{
-        // let sample = findByDataTest(component, 'success');
-        expect(1).toBe(1);
-    })
+    it('Account component has a header', ()=>{
+        let sample = findByDataTest(component, 'Account-header');
+        expect(sample.length).toBe(1);
+    });
+
+    it('Account component has a info section', ()=>{
+        let sample = findByDataTest(component, 'Account-info');
+        expect(sample.length).toBe(1);
+    });
+
+    it('Account component has a danger zone section', ()=>{
+        let sample = findByDataTest(component, 'Account-danger');
+        expect(sample.length).toBe(1);
+    });
 })
