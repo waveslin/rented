@@ -17,8 +17,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "prod": "npm run build; npm run build:lambda",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:lambda": "netlify-lambda serve functions",
+    "build:lambda": "netlify-lambda build functions"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +47,7 @@
     "enzyme-adapter-react-16": "^1.15.5",
     "jest": "26.6.0",
     "jest-enzyme": "^7.1.2",
-    "moxios": "^0.4.0"
+    "moxios": "^0.4.0",
+    "netlify-lambda": "^2.0.1"
   }
 }
