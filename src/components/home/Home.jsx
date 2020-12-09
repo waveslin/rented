@@ -4,8 +4,7 @@ import {Link} from 'react-router-dom';
 
 const Home = ()=>{
     const arr = [1,2,3,4,5,6];
-    const cards = arr.map((num, index) =>{
-        return (
+    const cards = arr.map((num, index) =>(
         <article className="card" key={index} data-test='building-property'>
             <Link to='#look'>
                 <div className="card-img" >
@@ -15,8 +14,8 @@ const Home = ()=>{
 
                 </div>
             </Link>
-        </article>);
-    });
+        </article>)
+    );
 
     return (
         <>
