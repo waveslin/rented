@@ -9,7 +9,7 @@ const Home = ()=>{
         <article className="card" key={index} data-test='building-property'>
             <Link to='#look'>
                 <div className="card-img" >
-                    <img src={`images/buildings/${'dushane-white-3lo_lkdeOBE-unsplash.jpg'}`} alt=""/>
+                    <img src={`images/buildings/${'apartment_1.jpg'}`} alt=""/>
                 </div>
                 <div className="card-body">
 
