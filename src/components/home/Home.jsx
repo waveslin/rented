@@ -2,22 +2,7 @@ import './Home.css';
 import {Link} from 'react-router-dom';
 
 
-const Home = ()=>{
-    const arr = [1,2,3,4,5,6];
-    const cards = arr.map((num, index) => (
-        <article className="card" key={index} data-test='building-property'>
-            <Link to='#look'>
-                <div className="card-img" >
-                    <img src={`images/buildings/${'apartment_'+num+'.jpg'}`} alt=""/>
-                </div>
-                <div className="card-body">
-
-                </div>
-            </Link>
-        </article>)
-    );
-
-    return (
+const Home = () => (
         <>
             <header data-test='home-header'>
                 <div className="hero">
@@ -30,7 +15,19 @@ const Home = ()=>{
                     <h2>Please Select the apartment you live in...</h2>
                 </div>
                 <div className="gallery">
-                    {cards}
+                    {
+                        [1,2,3,4,5,6].map((num, index) => (
+                        <article className="card" key={index} data-test='building-property'>
+                            <Link to='#look'>
+                                <div className="card-img" >
+                                    <img src={`images/buildings/${'apartment_'+num+'.jpg'}`} alt=""/>
+                                </div>
+                                <div className="card-body">
+
+                                </div>
+                            </Link>
+                        </article>))
+                    }
                 </div>
             </section>
             <section className="home"  data-test='home-section'>
@@ -79,6 +76,5 @@ const Home = ()=>{
             </section>
         </>
     );
-}
 
 export default Home;
