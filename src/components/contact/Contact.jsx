@@ -1,7 +1,6 @@
 import './Contact.css';
 
-const Contact = ()=>{
-    return (
+const Contact = ()=>(
         <>
             <header className="contact-header" data-test='Contact-header'>
                 <h1>Contact</h1>
@@ -31,6 +30,5 @@ const Contact = ()=>{
             </section>
         </>
     );
-}
 
 export default Contact;
