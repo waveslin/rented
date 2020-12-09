@@ -1,4 +1,4 @@
-import './Account.css';
+import './Account.scss';
 import {useState} from 'react';
 
 const Account = props => {

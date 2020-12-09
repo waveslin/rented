@@ -1,4 +1,4 @@
-import './Navigation.css';
+import './Navigation.scss';
 import {useState} from 'react';
 import {Link} from'react-router-dom';
 import {useVisibility, useVisibilityUpdate, useVisibilityReset} from '../context/Visibility.jsx'

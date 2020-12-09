@@ -1,4 +1,4 @@
-import './Payment.css';
+import './Payment.scss';
 import {useState} from 'react';
 
 const Payment = props => {

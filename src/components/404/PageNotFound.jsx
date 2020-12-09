@@ -1,4 +1,4 @@
-import './PageNotFound.css';
+import './PageNotFound.scss';
 
 const PageNotFound = () => (
         <section className="pagenotfound" data-test='PageNotFound'>

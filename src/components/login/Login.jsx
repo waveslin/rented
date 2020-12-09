@@ -1,4 +1,4 @@
-import './Login.css';
+import './Login.scss';
 import {useVisibility} from '../context/Visibility.jsx';
 
 const Login = ()=>{

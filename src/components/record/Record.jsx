@@ -1,4 +1,4 @@
-import './Record.css';
+import './Record.scss';
 
 const Record = props => {
     return (

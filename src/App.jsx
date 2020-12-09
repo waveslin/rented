@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {VisibilityProvider} from './components/context/Visibility.jsx'
 import Navigation from './components/navigation/Navigation.jsx'
