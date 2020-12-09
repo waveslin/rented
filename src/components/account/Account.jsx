@@ -1,7 +1,7 @@
 import './Account.css';
 import {useState} from 'react';
 
-const Account = (props) => {
+const Account = props => {
 
     const [disable, setDisable] = useState(true);
 

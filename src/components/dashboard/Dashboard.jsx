@@ -1,6 +1,6 @@
 import './Dashboard.css';
 
-const Dashboard = (props) => {
+const Dashboard = props => {
 
     return (
         <>

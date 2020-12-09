@@ -1,7 +1,7 @@
 import './Payment.css';
 import {useState} from 'react';
 
-const Payment = (props) => {
+const Payment = props => {
 
     const card = useState({last_4_digit : 4893, card_holder: 'Joe Divade'});
 

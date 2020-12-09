@@ -1,6 +1,6 @@
 import './Record.css';
 
-const Record = () => {
+const Record = props => {
     return (
         <section></section>
     );
