@@ -46,6 +46,10 @@ section.login{
         align-items: center;
         border: 0.1em solid #8d8d8d86;
 
+        .hide-input{
+            display: none;
+        }
+
         .login-input{
             width: 70%;
             height: 5em;
@@ -123,8 +127,4 @@ section.login{
         }
 
     }
-}
-
-.hide-input{
-    display: none;
 }
