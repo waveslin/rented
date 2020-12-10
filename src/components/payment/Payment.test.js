@@ -22,6 +22,11 @@ describe('Payment Test', ()=>{
         expect(sample.length).toBe(1);
     });
 
+    it('Payment component has a payment pay now section', ()=>{
+        let sample = findByDataTest(component, 'Payment-pay');
+        expect(sample.length).toBe(1);
+    });
+
     it('Payment component has a payment method section', ()=>{
         let sample = findByDataTest(component, 'Payment-method');
         expect(sample.length).toBe(1);

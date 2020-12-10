@@ -9,19 +9,19 @@ const Account = props => {
 
     return (
         <>
-            <header className='account-header' data-test='Account-header'>
+            <header className='account' data-test='Account-header'>
                 <h1>Account Setting</h1>
             </header>
-            <section className='account-info' data-test='Account-info'>
-                <fieldset className='account-info-field'>
+            <section className='account' data-test='Account-info'>
+                <fieldset className='account-info'>
                     <legend>Account Information</legend>
                     <form action="">
                         <div className="info-field-group">
-                            <label htmlFor="email">Email Address</label>
+                            <label htmlFor="email">Email</label>
                             <input type="email" name="email" id="email" value="sample@gmail.com" disabled={disable}/>
                         </div>
                         <div className="info-field-group">
-                            <label htmlFor="account">Rented Account</label>
+                            <label htmlFor="account">Account</label>
                             <input type="text" name="account" id="account" value="34839362" disabled/>
                         </div>
                         <div className="info-field-group">
@@ -37,23 +37,28 @@ const Account = props => {
                             <input type="text" name="date" id="date" value="2020-11-10" disabled/>
                         </div>
                         <div className="info-field-group">
-                            <label htmlFor="apt">Apartment Number</label>
+                            <label htmlFor="apt">Apartment</label>
                             <input type="text" name="apt" id="apt" value="402" disabled/>
                         </div>
                         <div className="info-field-group-lg">
-                            <label htmlFor="address">Apartment Address</label>
+                            <label htmlFor="address">Address</label>
                             <input type="text" name="address" id="address" value="4450 Rue Saint Fanc, Montreal, Quebec, Canada H2K 2C0" disabled/>
                         </div>
-                        <button onClick={toggleDisable} disabled={!disable}>Edit</button>
-                        <button onClick={toggleDisable} disabled={disable}>Save</button>
+                        <div className="info-button-group">
+                            <button onClick={toggleDisable} disabled={!disable}>Edit</button>
+                            <button onClick={toggleDisable} disabled={disable}>Save</button>
+                        </div>
                     </form>
                 </fieldset>
             </section>
-            <section data-test='Account-danger'>
-                <fieldset>
+            <section className='account' data-test='Account-danger'>
+                <fieldset className='account-danger'>
                     <legend>Danger Zone</legend>
+                    <p><b>Delete this account</b></p>
                     <p>Once you delete your account, there is no going back. Please be certain.</p>
-                    <button>Delete Account</button>
+                    <div>
+                        <button>Delete Account</button>
+                    </div>
                 </fieldset>
             </section>
         </>

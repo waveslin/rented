@@ -62,46 +62,52 @@ section.dashboard-inquiry{
             padding-left: 5px;
         }
     }
+
+    p.inquiry-address{
+        margin-top: 25px;
+        font-family: 'Source Sans Pro', sans-serif;
+
+        span{
+            font-family: 'Nanum Myeongjo', serif;
+            color: #666565;
+        }
+    }
+
+    p.inquiry-account,
+    p.inquiry-bill{
+        font-family: 'Source Sans Pro', sans-serif;
+
+        span.account-number{
+            color: #1980d4;
+            font-weight: 700;
+        }
+
+        span.bill-number{
+            font-family: 'Archivo Black', sans-serif;
+            color: #2c87d1;
+        }
+    }
+
+    p.inquiry-address-detail{
+        font-family: 'Nanum Myeongjo', serif;
+        color: #666565;
+        padding-left: 150px;
+    }
+
+    p.inquiry-bill-total{
+        display: block;
+        width: 100%;
+        min-height: 3.5em;  
+        
+        span.bill-number{
+            margin-left: 2em;
+            font-size: 2.5em;
+            color: #308af0;
+            
+        }
+    }
 }
 
-p.inquiry-address{
-    margin-top: 25px;
-}
-
-p.inquiry-address,
-p.inquiry-account,
-p.inquiry-bill{
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-p.inquiry-address-detail{
-    font-family: 'Nanum Myeongjo', serif;
-    color: #666565;
-    padding-left: 150px;
-}
-
-p.inquiry-bill-total{
-    display: block;
-    width: 100%;
-    min-height: 3.5em;   
-}
-
-span.account-number{
-    color: #1980d4;
-    font-weight: 700;
-}
-
-span.bill-number{
-    font-family: 'Archivo Black', sans-serif;
-    color: #2c87d1;
-}
-
-p.inquiry-bill-total span.bill-number{
-    margin-left: 2em;
-    font-size: 2.5em;
-    color: #308af0;
-    
-}
 
 section.dashboard-history{
     width: 95%;

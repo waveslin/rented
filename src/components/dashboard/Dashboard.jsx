@@ -13,6 +13,7 @@ const Dashboard = props => {
                 </div>
                 <div>
                     <p className="inquiry-account">Rented Account: <span className="account-number">34839362</span></p>
+                    <p className="inquiry-address">Apartment number: <span>501</span></p>
                     <p className="inquiry-address">Apartment adress: </p>
                     <p className="inquiry-address-detail">4450 Rue Saint Fanc, Montreal, Quebec, Canada H2K 2C0</p>
                     <p className="inquiry-bill inquiry-bill-total">Your bill total: <span className="bill-number">$1500</span></p>
