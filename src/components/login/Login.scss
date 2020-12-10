@@ -46,10 +46,6 @@ section.login{
         align-items: center;
         border: 0.1em solid #8d8d8d86;
 
-        .hide-input{
-            display: none;
-        }
-
         .login-input{
             width: 70%;
             height: 5em;
@@ -85,13 +81,11 @@ section.login{
                 &:not(:placeholder-shown){
                     border-color: #159bf58c;
 
-                    &+label{
+                    + label{
                         transform: scale(0.7) translate(-20%, -100%);
                         color: #159bf58c;
                     }
                 }
-
-                
             }
 
             label{
@@ -124,6 +118,10 @@ section.login{
                 color: #fff;
                 border: 0.1px solid #fff;
             }
+        }
+
+        .hide-input{
+            visibility: hidden;
         }
 
     }
