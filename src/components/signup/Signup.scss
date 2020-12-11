@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,700&display=swap');
 
 $size-mid : 757px;
+$dismatch-color: #fd1515;
 
 header.signup{
     width: 100%;
@@ -101,6 +102,10 @@ section.signup{
                     font-size: 1.3em;
                     height: 2.5em;
                 }
+            }
+
+            .dismatch-password{
+                border-color: $dismatch-color;
             }
         }
 

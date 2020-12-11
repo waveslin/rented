@@ -3,9 +3,22 @@ import {useState} from 'react';
 
 const Account = props => {
 
-    const [disable, setDisable] = useState(true);
+    props = {
+        email: "sample@gmail.com",
+        account: 34839362,
+        firstname: "Joe",
+        lastname: "Divade",
+        date: "2020-11-10",
+        apt: 402,
+        address: "4450 Rue Saint Fanc, Montreal, Quebec, Canada H2K 2C0"
+    }
 
+    const [disable, setDisable] = useState(true);
     const toggleDisable = () => {setDisable(!disable);}
+
+    const [email, setEmail] = useState(props.email);
+    const [firstname, setFirstname] = useState(props.firstname);
+    const [lastname, setLastname] = useState(props.lastname);
 
     return (
         <>
@@ -18,31 +31,31 @@ const Account = props => {
                     <form action="">
                         <div className="info-field-group">
                             <label htmlFor="email">Email</label>
-                            <input type="email" name="email" id="email" value="sample@gmail.com" disabled={disable}/>
+                            <input type="email" name="email" id="email" value={email} onChange={e=>setEmail(e.target.value)} disabled={disable}/>
                         </div>
                         <div className="info-field-group">
                             <label htmlFor="account">Account</label>
-                            <input type="text" name="account" id="account" value="34839362" disabled/>
+                            <input type="text" name="account" id="account" value={props.account} disabled/>
                         </div>
                         <div className="info-field-group">
                             <label htmlFor="firstname">First Name</label>
-                            <input type="text" name="firstname" id="firstname" value="Joe" disabled={disable}/>
+                            <input type="text" name="firstname" id="firstname" value={firstname} onChange={e=>setFirstname(e.target.value)} disabled={disable}/>
                         </div>
                         <div className="info-field-group">
                             <label htmlFor="lastname">Last Name</label>
-                            <input type="text" name="lastname" id="lastname" value="Divade" disabled={disable}/>
+                            <input type="text" name="lastname" id="lastname" value={lastname} onChange={e=>setLastname(e.target.value)} disabled={disable}/>
                         </div>
                         <div className="info-field-group">
                             <label htmlFor="date">Create Date</label>
-                            <input type="text" name="date" id="date" value="2020-11-10" disabled/>
+                            <input type="text" name="date" id="date" value={props.date} disabled/>
                         </div>
                         <div className="info-field-group">
                             <label htmlFor="apt">Apartment</label>
-                            <input type="text" name="apt" id="apt" value="402" disabled/>
+                            <input type="text" name="apt" id="apt" value={props.apt} disabled/>
                         </div>
                         <div className="info-field-group-lg">
                             <label htmlFor="address">Address</label>
-                            <input type="text" name="address" id="address" value="4450 Rue Saint Fanc, Montreal, Quebec, Canada H2K 2C0" disabled/>
+                            <input type="text" name="address" id="address" value={props.address} disabled/>
                         </div>
                         <div className="info-button-group">
                             <button onClick={toggleDisable} disabled={!disable}>Edit</button>

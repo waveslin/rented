@@ -1,35 +1,35 @@
 import './Payment.scss';
 import {useState} from 'react';
 
-const Payment = props => {
+const Payment = ({cardHolder, last4digit}) => {
 
-    const card = useState({last_4_digit : 4893, card_holder: 'Joe Divade'});
-    // const card = useState(null);
+    // cardHolder = 'Joe Divade'; last4digit = 4839;
 
-    const payment_method = props =>{
-        if(props === null){
+    const [holder, setHolder] = useState("");
+    const [number, setNumber] = useState("");
+    const [expire, setExpire] = useState("");
+    const [cvv, setCvv] = useState("");
+
+    const payment_method = (cardHolder, last4digit) =>{
+        if(cardHolder === undefined  || last4digit === undefined || cardHolder === null || last4digit === null){
             return (
-                <>
-                    <div className="payment-form">
-                        <form action="">
-                            <input type="text" name="holder" placeholder="Card Holder"/>
-                            <input type="text" name="number" placeholder="Card Number"/>
-                            <input type="text" name="date" placeholder="Expire Date"/>
-                            <input type="text" name="cvv" placeholder="CVV"/>
-                            <button>SAVE</button>
-                        </form>
-                    </div>
-                </>
+                <div className="payment-form">
+                    <form action="">
+                        <input type="text" name="holder" placeholder="Card Holder" value={holder} onChange={e=>setHolder(e.target.value)} />
+                        <input type="text" name="number" placeholder="Card Number" value={number} onChange={e=>setNumber(e.target.value)} />
+                        <input type="text" name="expire" placeholder="Expire Date" value={expire} onChange={e=>setExpire(e.target.value)} />
+                        <input type="text" name="cvv" placeholder="CVV" value={cvv} onChange={e=>setCvv(e.target.value)} />
+                        <button>SAVE</button>
+                    </form>
+                </div>
             );
         }
         return (
-            <>
-                <div className="payment-card">
-                    <p>Card Holder: <span>Xuan Li</span></p>
-                    <p>Last 4 digit: <span>1500</span></p>
-                    <button>DELETE CARD</button>
-                </div>
-            </>
+            <div className="payment-card">
+                <p>Card Holder: <span>{cardHolder}</span></p>
+                <p>Last 4 digit: <span>{last4digit}</span></p>
+                <button>DELETE CARD</button>
+            </div>
         );
     }
 
@@ -52,7 +52,7 @@ const Payment = props => {
             <section className="payment" data-test='Payment-method'>
                 <h1>Payment method</h1>
                 <div className="payment-method">
-                    { payment_method(card[0])}
+                    { payment_method(cardHolder, last4digit)}
                 </div>
             </section>
         </>

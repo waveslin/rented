@@ -200,7 +200,8 @@ section.payment{
 
         div.payment-form{
             @extend div.payment-card;
-            padding: 0.5em;
+            padding: 1em;
+            margin-bottom: 2em;
 
             form{
                 display: flex;
