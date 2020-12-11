@@ -43,12 +43,12 @@ const Signup = () =>{
                     <label htmlFor="address">Address</label>
                         <select type="text" name="address" id="address"  placeholder="Address"  value={address} onChange={e => setAddress(e.target.value)} >
                             <option value="/"> </option>
-                            <option value="3300 Rue Saint Verdun, Montreal, Quebec, H3H 2L9">3300 Rue Saint Verdun, Montreal, Quebec, H3H 2L9</option>
-                            <option value="1705 Foxing Street, Vancouver, British Columbia, V5K 2B8">1705 Foxing Street, Vancouver, British Columbia, V5K 2B8</option>
-                            <option value="1705 Purplian Street, Toronto, Ontario, M4Y 1U6">1705 Purplian Street, Toronto, Ontario, M4Y 1U6</option>
-                            <option value="2680 Rue Saint Castionue, Montreal, Quebec, H5I 0A7">2680 Rue Saint Castionue, Montreal, Quebec, H5I 0A7</option>
-                            <option value="5600 Rosean Street, Vancouver, British Columbia, V4P 9N5">5600 Rosean Street, Vancouver, British Columbia, V4P 9N5</option>
-                            <option value="1280 Natarue Street, Vancouver, British Columbia, V4M 8G8">1280 Natarue Street, Vancouver, British Columbia, V4M 8G8</option>
+                            <option value="3300, Rue Saint Verdun, Montreal, Quebec, H3H 2L9">3300 Rue Saint Verdun, Montreal, Quebec, H3H 2L9</option>
+                            <option value="1705, Foxing Street, Vancouver, British Columbia, V5K 2B8">1705 Foxing Street, Vancouver, British Columbia, V5K 2B8</option>
+                            <option value="1705, Purplian Street, Toronto, Ontario, M4Y 1U6">1705 Purplian Street, Toronto, Ontario, M4Y 1U6</option>
+                            <option value="2680, Rue Saint Castionue, Montreal, Quebec, H5I 0A7">2680 Rue Saint Castionue, Montreal, Quebec, H5I 0A7</option>
+                            <option value="5600, Rosean Street, Vancouver, British Columbia, V4P 9N5">5600 Rosean Street, Vancouver, British Columbia, V4P 9N5</option>
+                            <option value="1280, Natarue Street, Vancouver, British Columbia, V4M 8G8">1280 Natarue Street, Vancouver, British Columbia, V4M 8G8</option>
                         </select>
                     </div>
                     <div className='signup-combine-input'>

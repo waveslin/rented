@@ -1,17 +1,21 @@
 import './Navigation.scss';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {Link} from'react-router-dom';
 import {useVisibility, useVisibilityUpdate, useVisibilityReset} from '../context/Visibility.jsx'
 
-const Navigation = () => {
+const Navigation = ({auth}) => {
 
+    // auth = {login: false}
     const toggle = useVisibility();
     const setToggle = useVisibilityUpdate();
     const resetToggle = useVisibilityReset();
 
-    const [auth, setAuth] = useState(true);
-    const resetAuth = () => { setAuth(false); resetToggle();}
+    const [login, setLogin] = useState(false);
+    const resetAuth = () => { setLogin(false); resetToggle();}
    
+    useEffect(()=>setLogin(auth.login),[auth.login]);
+
+
     const links = (props) =>{
         if(props){
             return (
@@ -32,6 +36,7 @@ const Navigation = () => {
             </>
         );
     }
+    
 
     return (
         <nav data-test='Navigation-nav'>
@@ -50,7 +55,7 @@ const Navigation = () => {
                     <i className="fas fa-times-circle"></i>
                 </button>
                 <ul className={`nav-list${toggle ? ' hide' : ' show'}`} id="menu" data-test='Navigation-link-list'>
-                    {links(auth)}
+                    {links(login)}
                 </ul>
             </section>
         </nav>
