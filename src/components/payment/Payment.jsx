@@ -3,7 +3,7 @@ import {useState} from 'react';
 
 const Payment = ({cardHolder, last4digit}) => {
 
-    // cardHolder = 'Joe Divade'; last4digit = 4839;
+    cardHolder = 'Joe Divade'; last4digit = 4839;
 
     const [holder, setHolder] = useState("");
     const [number, setNumber] = useState("");

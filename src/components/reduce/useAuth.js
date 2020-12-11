@@ -6,16 +6,17 @@ export const ACTIONS = {
 }
 
 async function httpLogin(link, body){
-    const result = await axios.post(link,
+    const data = await axios.post(link,
     {
         email:body.email,
         password: body.password
     }, {
         headers: {
-            "Content-Type" : "application/json"
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type" : "application/json",
         }
     })
-    return result;
+    return data;
 }
 
 export function authReducer(auth, action){

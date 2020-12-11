@@ -10,7 +10,7 @@ const Navigation = ({auth}) => {
     const setToggle = useVisibilityUpdate();
     const resetToggle = useVisibilityReset();
 
-    const [login, setLogin] = useState(false);
+    const [login, setLogin] = useState(true);
     const resetAuth = () => { setLogin(false); resetToggle();}
    
     // useEffect(()=>setLogin(auth.login),[auth.login]);
