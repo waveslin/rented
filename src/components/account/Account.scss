@@ -38,7 +38,10 @@ header.account{
 
 section.account{
     max-width: 1024px;
-    margin: 0 auto;
+    margin: 1em auto;
+    background-color:  #f7f6f4f3;
+    border-radius: 5px;
+    border: 2.5px solid #e8e8f0;
 
     fieldset{
         margin: 0;
@@ -46,8 +49,9 @@ section.account{
         border-radius: 4px;
 
         legend{
-            font-family: 'Anton', sans-serif;
+            font-family: 'Julius Sans One', sans-serif;
             font-size: 1.5em;
+            font-weight: 900;
             margin: 0 20px;
             padding: 0;
         } 

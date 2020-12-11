@@ -14,7 +14,7 @@ const Account = props => {
             </header>
             <section className='account' data-test='Account-info'>
                 <fieldset className='account-info'>
-                    <legend>Account Information</legend>
+                    <legend>Information</legend>
                     <form action="">
                         <div className="info-field-group">
                             <label htmlFor="email">Email</label>

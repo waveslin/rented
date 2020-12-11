@@ -4,19 +4,31 @@ import {useState} from 'react';
 const Payment = props => {
 
     const card = useState({last_4_digit : 4893, card_holder: 'Joe Divade'});
+    // const card = useState(null);
 
     const payment_method = props =>{
         if(props === null){
             return (
                 <>
-                    <div>please add a payment method</div>
+                    <div className="payment-form">
+                        <form action="">
+                            <input type="text" name="holder" placeholder="Card Holder"/>
+                            <input type="text" name="number" placeholder="Card Number"/>
+                            <input type="text" name="date" placeholder="Expire Date"/>
+                            <input type="text" name="cvv" placeholder="CVV"/>
+                            <button>SAVE</button>
+                        </form>
+                    </div>
                 </>
             );
         }
         return (
             <>
-            <div>{props.last_4_digit}</div>
-            <div>{props.card_holder}</div>
+                <div className="payment-card">
+                    <p>Card Holder: <span>Xuan Li</span></p>
+                    <p>Last 4 digit: <span>1500</span></p>
+                    <button>DELETE CARD</button>
+                </div>
             </>
         );
     }
@@ -27,16 +39,21 @@ const Payment = props => {
                 <h1>Payment</h1>
             </header>
             <section className="payment" data-test='Payment-pay'>
-                <div>
-                    <p className="payment-account">Rented Account: <span className="account-number">34839362</span></p>
-                    <p className="payment-bill">Your bill total: <span className="bill-number">$1500</span></p>
-                </div>
-                <div>
-                    <button>Pay Now</button>
+                <div className="payment-inquiry">
+                    <div className="make-payment">
+                        <p>Rented Account: <span>34839362</span></p>
+                        <p>Your bill total: <span>$1500</span></p>
+                    </div>
+                    <div className="make-payment">
+                        <button>PAY NOW</button>
+                    </div>
                 </div>
             </section>
-            <section className="payment-method" data-test='Payment-method'>
-               { payment_method(card[0])}
+            <section className="payment" data-test='Payment-method'>
+                <h1>Payment method</h1>
+                <div className="payment-method">
+                    { payment_method(card[0])}
+                </div>
             </section>
         </>
     );

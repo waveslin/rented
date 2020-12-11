@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+
+$pay-color: #3d81c6;
+$save-color: #12b54e;
+$delete-color: #fb1717;
+$disable-color: #aaa;
+$size-lg: 1060px;
+$size-md : 829px;
+$size-sm: 523px;
+$size-mid: 635px;
 
 header.payment{
     width: 100%;
@@ -27,23 +39,212 @@ section.payment{
     width: 95%;
     min-height: 10em;
     margin: 1em auto;
-    padding-left: 2em;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     background-color:  #f7f6f4f3;
     border-radius: 5px;
     border: 2.5px solid #e8e8f0;
 
-    div{
-        box-sizing: border-box;
-        width: 100%;
-        padding: 15px;
+    @media screen and (max-width: $size-sm){
+        width: 99%;
+        flex-direction: column;
+    }
 
-        &:last-child{
-            display: flex;
-            justify-content: flex-end;
+    &:last-child{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1{
+            width: 100%;
+            margin: 0 0 1em 0;
+            text-align: left;
+            font-family: 'Julius Sans One', sans-serif;
+            font-size: 2em;
+            font-weight: 900;
         }
     }
+
+    .payment-inquiry{
+        width: 60%;
+        height: 100%;
+        display: flex;
+        
+
+        @media screen and (max-width: $size-lg){
+            width: 80%;
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: $size-md){
+            width: 100%;
+            flex-direction: column;
+        }
+
+        div.make-payment{
+            box-sizing: border-box;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+            &:last-child{
+                
+                justify-content: flex-end;
+                align-items: flex-end;
+                margin-top: 25px;
+            }
+    
+            p{
+                font-family: 'Open Sans Condensed', sans-serif;
+                font-family: 'Quicksand', sans-serif;
+                font-size: 1.5em;
+                font-weight: 700;
+                margin: 0;
+    
+                @media screen and (max-width: $size-sm){
+                    font-size: 1.2em;
+                }
+    
+                span{
+                    font-weight: 400;
+                }
+            }
+    
+            button{
+                width: 180px;
+                padding: 1em;
+                font-size: 1.2em;
+                color: $pay-color;
+                background-color: #fff;
+                border-radius: 2px;
+                border: 1px solid $pay-color;
+                font-family: 'Julius Sans One', sans-serif;
+                outline: none;
+    
+                &:hover{
+                    color: #fff;
+                    background-color: $pay-color;
+                }
+    
+                &:disabled{
+                    border: 1px solid $disable-color;
+                    background-color: #dfdfdf;
+                    color: #919191;
+                }
+            }
+        }
+    }
+
+    .payment-method{
+        @extend .payment-inquiry;
+        justify-content: space-between;
+        flex-direction: row;
+
+        @media screen and (max-width: $size-lg){
+            flex-direction: row;
+        }
+
+        @media screen and (max-width: $size-md){
+            flex-direction: row;
+        }
+
+        div.payment-card{
+            @extend div.make-payment;
+            flex-direction: row;
+            padding: 2em 0;
+            background-color: #f7f3ec;
+            border: 1px solid  #939393;
+            border-radius: 3px;
+
+            &:last-child{
+                justify-content: space-evenly;
+                align-items: center;
+                margin-top: 0;
+            }
+
+            @media screen and (max-width: $size-mid){
+                padding: 0.5em;
+                flex-direction: column;
+                justify-content: space-evenly;
+                font-size: 1.3em;
+            }
+
+            p{
+                font-size: 1.2em;
+                font-weight: 800;
+                margin: 0.5em;
+
+                @media screen and (max-width: $size-sm){
+                    font-size: 1em;
+                }
+            }
+
+            button{
+                
+                padding: 0.5em;
+                color: $delete-color;
+                border-color: $delete-color;
+
+                @media screen and (max-width: $size-sm){
+                    padding: 0.3em;
+                    margin: 0.5em;
+                }
+
+                &:hover{
+                    color: #fff;
+                    background-color: $delete-color;
+                }
+            }
+        }
+
+        div.payment-form{
+            @extend div.payment-card;
+            padding: 0.5em;
+
+            form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+
+                input{
+                    width: 80%;
+                    margin: 1em 0;
+                    font-size: 1.5em;
+                    outline: none;
+                    border: none;
+                    background: none;
+                    border-bottom: 1.5px solid #ddd;
+                    font-family: 'Open Sans Condensed', sans-serif;
+                    font-family: 'Quicksand', sans-serif;
+
+                    &::placeholder{
+                        font-family: 'Open Sans Condensed', sans-serif;
+                        font-family: 'Quicksand', sans-serif;
+                    }
+
+                    &:focus,
+                    &:not(:placeholder-shown){
+                        border-color: #999;
+                    }
+                }
+
+                button{
+                    width: 80%;
+                    color: $save-color;
+                    border-color: $save-color;
+                    font-size: 1.5em;
+
+                    &:hover{
+                        color: #fff;
+                        background-color: $save-color;
+                    }
+                }
+            }
+        }
+
+    }
+
+    
 }
