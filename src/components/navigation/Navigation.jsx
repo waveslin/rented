@@ -13,7 +13,7 @@ const Navigation = ({auth}) => {
     const [login, setLogin] = useState(false);
     const resetAuth = () => { setLogin(false); resetToggle();}
    
-    useEffect(()=>setLogin(auth.login),[auth.login]);
+    // useEffect(()=>setLogin(auth.login),[auth.login]);
 
 
     const links = (props) =>{

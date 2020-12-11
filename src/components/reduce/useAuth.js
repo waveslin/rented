@@ -5,9 +5,8 @@ export const ACTIONS = {
     LOGIN : "log_in"
 }
 
-function httpLogin(link, body){
-    let result = null;
-    axios.post(link,
+async function httpLogin(link, body){
+    const result = await axios.post(link,
     {
         email:body.email,
         password: body.password
@@ -15,8 +14,7 @@ function httpLogin(link, body){
         headers: {
             "Content-Type" : "application/json"
         }
-    }).then(res=> result = res)
-    .catch(err=>console.log(err))
+    })
     return result;
 }
 
