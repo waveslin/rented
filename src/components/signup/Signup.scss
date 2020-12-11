@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,700&display=swap');
 
-$size-mid : 757px;
+$size-md : 829px;
+$size-sm : 523px;
 $dismatch-color: #fd1515;
 
 header.signup{
@@ -47,7 +48,7 @@ section.signup{
         border: 0.1em solid #8d8d8d86;
         border-radius: 5px;
 
-        @media screen and (max-width: $size-mid){
+        @media screen and (max-width: $size-sm){
             width: 90VW;
             margin: 0;
         }
@@ -63,7 +64,7 @@ section.signup{
             flex-direction: column;
             align-items: center;
 
-            @media screen and (max-width: $size-mid){
+            @media screen and (max-width: $size-sm){
                 height: 5em;
                 margin: 0.5em 0;
             }
@@ -77,7 +78,7 @@ section.signup{
                 font-size: 1.5rem;
                 font-family: 'Merriweather', serif;
 
-                @media screen and (max-width: $size-mid){
+                @media screen and (max-width: $size-sm){
                     height: 2.5em;
                     margin: 0.25em 0;
                     font-size: 1.5em;
@@ -98,7 +99,7 @@ section.signup{
                 font-size: 1.5em;
                 font-family: 'Oswald', sans-serif;
 
-                @media screen and (max-width: $size-mid){
+                @media screen and (max-width: $size-sm){
                     font-size: 1.3em;
                     height: 2.5em;
                 }
@@ -120,23 +121,33 @@ section.signup{
             display: flex;
             justify-content: space-between;
 
-            @media screen and (max-width: $size-mid){
+            @media screen and (max-width: $size-sm){
                 flex-wrap: wrap;
+                margin-bottom: 0;
             }
 
             .signup-combine-input{
-                width: 20%;
+                width: 75%;
                 
-                @media screen and (max-width: $size-mid){
-                    width: 45%;
-                    margin: 0.2em;
+                @media screen and (max-width: $size-sm){
+                    width: 100%;
+                    
+                }
+
+                &:last-child{
+                    width: 20%;
+
+                    @media screen and (max-width: $size-sm){
+                        width: 100%;
+                        margin-top: 1em;
+                    }
                 }
 
                 label{
                     font-size: 1.5em;
                     font-family: 'Merriweather', serif;
 
-                    @media screen and (max-width: $size-mid){
+                    @media screen and (max-width: $size-sm){
                         font-size: 1.3em;
                         height: 2.2em;
                         margin: 0.1em 0;
@@ -154,10 +165,10 @@ section.signup{
                     padding-left: 10px;
                     font-family: 'Oswald', sans-serif;
 
-                    @media screen and (max-width: $size-mid){
+                    @media screen and (max-width: $size-sm){
                         font-size: 1.1em;
                         height: 2.2em;
-                        margin: 0.25em 0;
+                        margin: 0.5em 0;
 
                         &::placeholder{
                             font-size: 1em;
@@ -167,11 +178,25 @@ section.signup{
 
                 select{
                     @extend input;
+                    padding: 0; 
+                    height: 3.8em;
+                    margin: 0.7em 0;
+                    font-size: 1em;
+                    overflow: hidden;
 
-                    @media screen and (max-width: $size-mid){
-                        font-size: 1.1em;
-                        height: 2.2em;
+                    @media screen and (max-width: $size-md){
+                        font-size: 0.8em;
+                        height: 4.7em;
+                        margin: 1em 0;
                     }
+
+                    @media screen and (max-width: $size-sm){
+                        font-size: 0.6em;
+                        height: 4em;
+                        text-align: center;
+                        padding-left: 10px;
+                    }
+
                 }
             }
         }
@@ -197,7 +222,7 @@ section.signup{
                 border: 1px solid  #d4e1ff;
             }
 
-            @media screen and (max-width: $size-mid){
+            @media screen and (max-width: $size-sm){
                 height: 2em;
                 font-size: 1.5em;
             }

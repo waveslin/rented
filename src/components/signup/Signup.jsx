@@ -7,9 +7,6 @@ const Signup = () =>{
     const [lastname, setLastname] = useState("");
     const [email, setEmail] = useState("");
     const [address, setAddress] = useState("");
-    const [city, setCity] = useState("");
-    const [province, setProvince] = useState("");
-    const [postal, setPostal] = useState("");
     const [apt, setApt] = useState("");
     const [password, setPassword] = useState("");
     const [password2, setPassword2] = useState("");
@@ -41,27 +38,18 @@ const Signup = () =>{
                     <label htmlFor="email">E-mail</label>
                     <input type="email" name="email" id="email"  placeholder="E-mail"  value={email} onChange={e => setEmail(e.target.value)} />
                 </div>
-                <div className='signup-input'>
-                    <label htmlFor="address">Address</label>
-                    <input type="text" name="address" id="address"  placeholder="Address"  value={address} onChange={e => setAddress(e.target.value)} />
-                </div>
                 <div className="signup-combine">
                     <div className='signup-combine-input'>
-                        <label htmlFor="city">City</label>
-                        <input type="text" name="city" id="city"  placeholder="City"  value={city} onChange={e => setCity(e.target.value)} />
-                    </div>
-                    <div className='signup-combine-input'>
-                        <label htmlFor="province">Province</label>
-                        <select name="province" id="province"  value={province} onChange={e => setProvince(e.target.value)} >
+                    <label htmlFor="address">Address</label>
+                        <select type="text" name="address" id="address"  placeholder="Address"  value={address} onChange={e => setAddress(e.target.value)} >
                             <option value="/"> </option>
-                            <option value="BC">BC</option>
-                            <option value="ON">ON</option>
-                            <option value="QC">QC</option>
+                            <option value="3300 Rue Saint Verdun, Montreal, Quebec, H3H 2L9">3300 Rue Saint Verdun, Montreal, Quebec, H3H 2L9</option>
+                            <option value="1705 Foxing Street, Vancouver, British Columbia, V5K 2B8">1705 Foxing Street, Vancouver, British Columbia, V5K 2B8</option>
+                            <option value="1705 Purplian Street, Toronto, Ontario, M4Y 1U6">1705 Purplian Street, Toronto, Ontario, M4Y 1U6</option>
+                            <option value="2680 Rue Saint Castionue, Montreal, Quebec, H5I 0A7">2680 Rue Saint Castionue, Montreal, Quebec, H5I 0A7</option>
+                            <option value="5600 Rosean Street, Vancouver, British Columbia, V4P 9N5">5600 Rosean Street, Vancouver, British Columbia, V4P 9N5</option>
+                            <option value="1280 Natarue Street, Vancouver, British Columbia, V4M 8G8">1280 Natarue Street, Vancouver, British Columbia, V4M 8G8</option>
                         </select>
-                    </div>
-                    <div className='signup-combine-input'>
-                        <label htmlFor="postal">Postal</label>
-                        <input type="text" name="postal" id="postal"  placeholder="Postal" value={postal} onChange={e => setPostal(e.target.value)} />
                     </div>
                     <div className='signup-combine-input'>
                         <label htmlFor="apt">Apt</label>
@@ -74,7 +62,7 @@ const Signup = () =>{
                 </div>
                 <div className='signup-input'>
                     <label htmlFor="confirm_password">Confirm Password</label>
-                    <input type="password" name="confirm_password" class={dismatch ? 'dismatch-password' : ''} id="confirm_password"  placeholder="confirm_Password" value={password2} onChange={e => setPassword2(e.target.value)} />
+                    <input type="password" name="confirm_password" className={dismatch ? 'dismatch-password' : ''} id="confirm_password"  placeholder="confirm_Password" value={password2} onChange={e => setPassword2(e.target.value)} />
                 </div>
                 <button>Sign up</button>
             </form>
