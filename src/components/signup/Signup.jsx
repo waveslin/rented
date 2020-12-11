@@ -62,7 +62,7 @@ const Signup = () =>{
                 </div>
                 <div className='signup-input'>
                     <label htmlFor="confirm_password">Confirm Password</label>
-                    <input type="password" name="confirm_password" className={dismatch ? 'dismatch-password' : ''} id="confirm_password"  placeholder="confirm_Password" value={password2} onChange={e => setPassword2(e.target.value)} />
+                    <input type="password" name="confirm_password" className={dismatch ? 'dismatch-password' : ''} id="confirm_password"  placeholder="Confirm Password" value={password2} onChange={e => setPassword2(e.target.value)} />
                 </div>
                 <button>Sign up</button>
             </form>

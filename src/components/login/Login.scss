@@ -94,8 +94,9 @@ section.login{
                 width: 100%;
                 padding: 0 1em;
                 box-sizing: border-box;
-                font-size: 1.5rem;
-                font-family: monospace;
+                font-size: 1.1rem;
+                font-family: 'Open Sans Condensed', sans-serif;
+                font-family: 'Quicksand', sans-serif;
                 text-align: left;
                 transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             }
@@ -106,7 +107,7 @@ section.login{
             height: 2em;
             margin: 1em 0;
             box-sizing: border-box;
-            font-family: 'Roboto Slab', serif;
+            font-family: 'Julius Sans One', sans-serif;
             font-size: 2em;
             color: #4679e6;
             background-color: #b5caf7;

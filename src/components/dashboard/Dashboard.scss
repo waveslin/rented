@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 header.dashboard{
@@ -65,17 +64,20 @@ section.dashboard-inquiry{
 
     p.inquiry-address{
         margin-top: 25px;
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: 'Nanum Myeongjo', serif;
+        font-weight: 800;
 
         span{
             font-family: 'Nanum Myeongjo', serif;
+            font-weight: 800;
             color: #666565;
         }
     }
 
     p.inquiry-account,
     p.inquiry-bill{
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: 'Nanum Myeongjo', serif;
+        font-weight: 800;
 
         span.account-number{
             color: #1980d4;

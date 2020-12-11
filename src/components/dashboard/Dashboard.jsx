@@ -6,7 +6,6 @@ const Dashboard = props => {
         account: 34839362,
         apt: 501,
         address: "4450 Rue Saint Fanc, Montreal, Quebec, Canada H2K 2C0",
-        total: 1500,
         bill: 1500,
         history: [
             {
@@ -43,11 +42,10 @@ const Dashboard = props => {
                 </div>
                 <div>
                     <p className="inquiry-account">Rented Account: <span className="account-number">{props.account}</span></p>
-                    <p className="inquiry-address">Apartment number: <span>{props.apt}</span></p>
-                    <p className="inquiry-address">Apartment adress: </p>
+                    <p className="inquiry-address">Apartment Number: <span>{props.apt}</span></p>
+                    <p className="inquiry-address">Apartment Adress: </p>
                     <p className="inquiry-address-detail">{props.address}</p>
-                    <p className="inquiry-bill inquiry-bill-total">Your bill total: <span className="bill-number">${props.total}</span></p>
-                    <p className="inquiry-bill">Your bill for this month: <span className="bill-number">${props.bill}</span></p>
+                    <p className="inquiry-bill inquiry-bill-total">Your bill total: <span className="bill-number">${props.bill}</span></p>
                 </div>
             </section>
             <section className='dashboard-history' data-test='Dashboard-history'>
@@ -56,8 +54,8 @@ const Dashboard = props => {
                 </div>
                 <div className="history-download">
                     {
-                        props.history.map(record => (
-                            <div className="history-record">
+                        props.history.map((record, index) => (
+                            <div className="history-record" key={index}>
                                 <p className="record-month-year">{`${record.month} ${record.year}`}</p>
                                 <a href={`#${record.recordID}`}>view</a>
                             </div>
