@@ -31,7 +31,7 @@ export async function authReducer(auth, action){
         case ACTIONS.LOGIN:
             const data = await httpLogin(API.LOGIN, action.payload);
             console.log('result',data)
-            return data;
+            return await data;
         default:
             break;
     }
