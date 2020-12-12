@@ -5,7 +5,7 @@ import {useVisibility, useVisibilityUpdate, useVisibilityReset} from '../context
 
 const Navigation = ({auth}) => {
 
-    // auth = {login: false}
+    console.log(auth);
     const toggle = useVisibility();
     const setToggle = useVisibilityUpdate();
     const resetToggle = useVisibilityReset();

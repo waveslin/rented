@@ -2,24 +2,8 @@ import {useState} from 'react';
 import './Login.scss';
 import {useVisibility} from '../context/Visibility.jsx';
 import {ACTIONS} from '../reduce/useAuth';
-import axios from 'axios';
 
 const Login = ({authDispatch}) =>{
-
-    // async function get(){
-    //     try {
-    //         let response = await axios({url: 'https://jsonplaceholder.typicode.com/todos',method: 'get', timeout: 8000,headers: {'Content-Type': 'application/json',}})
-    //         let {data} = response;
-    //         return data;
-    //     }
-    //     catch (err){
-    //         console.log(err)
-    //     }
-    // }
-
-    // let data = get();
-    // console.log("res",data);
-
    
 
     const hide = useVisibility();

@@ -1,11 +1,5 @@
 const jwt = require('jsonwebtoken');
 
-const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'
-  };
-
 export function handler(event, context, callback) {
     let msg = '';
     let token = null;
@@ -20,7 +14,6 @@ export function handler(event, context, callback) {
         msg = 'Yay! You have log in.';
         return callback(null, {
             statusCode: 200,
-            headers,
             body: JSON.stringify({ msg, login, token})
         });
     }else{
