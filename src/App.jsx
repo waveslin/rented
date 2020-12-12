@@ -14,7 +14,7 @@ import Account from './components/account/Account.jsx';
 import PageNotFound from './components/404/PageNotFound.jsx';
 import {authReducer} from './components/reduce/useAuth';
 
-const App = async ()=> {
+const App = ()=> {
 
   const [auth, authDispatch] = useReducer(authReducer, {login: false, token: null})
 
