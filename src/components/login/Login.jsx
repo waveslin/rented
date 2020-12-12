@@ -2,8 +2,25 @@ import {useState} from 'react';
 import './Login.scss';
 import {useVisibility} from '../context/Visibility.jsx';
 import {ACTIONS} from '../reduce/useAuth';
+import axios from 'axios';
 
 const Login = ({authDispatch}) =>{
+
+    // async function get(){
+    //     try {
+    //         let response = await axios({url: 'https://jsonplaceholder.typicode.com/todos',method: 'get', timeout: 8000,headers: {'Content-Type': 'application/json',}})
+    //         let {data} = response;
+    //         return data;
+    //     }
+    //     catch (err){
+    //         console.log(err)
+    //     }
+    // }
+
+    // let data = get();
+    // console.log("res",data);
+
+   
 
     const hide = useVisibility();
 
@@ -29,10 +46,10 @@ const Login = ({authDispatch}) =>{
                     <label htmlFor="email">E-mail</label>
                 </div>
                 <div className={`login-input${(hide) ? '': ' hide-input'}`}>
-                    <input type="password" name="password" id="password"  placeholder="Password" data-test='Login-input-password' value={password} onChange={e => setPassword(e.target.value)} />
+                    <input type="password" name="password" id="password"  placeholder="Password" data-test='Login-input-password' value={password} onChange={e => setPassword(e.target.value)} autoComplete='on'/>
                     <label htmlFor="password">Password</label>
                 </div>
-                <button data-test='Login-login-button'>Log In</button>
+                <button data-test='Login-login-button' type="submit">Log In</button>
             </form>
         </section>
         </>
