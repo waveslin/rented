@@ -58,11 +58,11 @@ const Signup = () =>{
                 </div>
                 <div className='signup-input'>
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="password"  placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
+                    <input type="password" name="password" id="password"  placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} autoComplete='on'/>
                 </div>
                 <div className='signup-input'>
                     <label htmlFor="confirm_password">Confirm Password</label>
-                    <input type="password" name="confirm_password" className={dismatch ? 'dismatch-password' : ''} id="confirm_password"  placeholder="Confirm Password" value={password2} onChange={e => setPassword2(e.target.value)} />
+                    <input type="password" name="confirm_password" className={dismatch ? 'dismatch-password' : ''} id="confirm_password"  placeholder="Confirm Password" value={password2} onChange={e => setPassword2(e.target.value)} autoComplete='off'/>
                 </div>
                 <button>Sign up</button>
             </form>

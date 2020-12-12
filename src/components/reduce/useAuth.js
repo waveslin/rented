@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const LINK = 'http://localhost:60285/.netlify/functions/';
+const LINK = 'https://rented.netlify.app/.netlify/functions/';
 
 const API = {
     LOGIN : `${LINK}login`

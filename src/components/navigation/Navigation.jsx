@@ -5,15 +5,14 @@ import {useVisibility, useVisibilityUpdate, useVisibilityReset} from '../context
 
 const Navigation = ({auth}) => {
 
-    console.log(auth);
     const toggle = useVisibility();
     const setToggle = useVisibilityUpdate();
     const resetToggle = useVisibilityReset();
 
-    const [login, setLogin] = useState(true);
+    const [login, setLogin] = useState(false);
     const resetAuth = () => { setLogin(false); resetToggle();}
    
-    // useEffect(()=>setLogin(auth.login),[auth.login]);
+    useEffect(()=>{setLogin(auth.login); console.log(auth, login);},[auth.login]);
 
 
     const links = (props) =>{
