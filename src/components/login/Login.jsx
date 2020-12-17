@@ -1,7 +1,7 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import './Login.scss';
 import {useVisibility} from '../context/Visibility.jsx';
-import {ACTIONS} from '../reduce/useAuth';
+import axios from 'axios';
 
 const Login = ({authDispatch}) =>{
    
@@ -10,18 +10,25 @@ const Login = ({authDispatch}) =>{
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [thing, setThing] = useState("");
 
     const LoginHandle = e => {
         e.preventDefault();
-        console.log(email, password);
-        authDispatch({ type: ACTIONS.LOGIN , payload: {email, password}})
     }
+
+    useEffect(() => {
+        (async ()=>{
+            axios.get("http://localhost:4500/").then(res=>{
+                setThing(res.data.msg);
+            })
+        })()
+    }, [])
 
     return (
         <>
         <header className="login" data-test='Login-header'>
             <h1><i className="fas fa-sign-in-alt"></i> Log In</h1>
-            <p>Welcome Back</p>
+            <p>Welcome Back: {thing}</p>
         </header>
         <section className="login">
             <form action="" data-test='Login-form' onSubmit={LoginHandle}>

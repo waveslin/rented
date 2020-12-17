@@ -1,9 +1,9 @@
 import './Navigation.scss';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import {Link} from'react-router-dom';
 import {useVisibility, useVisibilityUpdate, useVisibilityReset} from '../context/Visibility.jsx'
 
-const Navigation = ({auth}) => {
+const Navigation = () => {
 
     const toggle = useVisibility();
     const setToggle = useVisibilityUpdate();
@@ -11,9 +11,6 @@ const Navigation = ({auth}) => {
 
     const [login, setLogin] = useState(false);
     const resetAuth = () => { setLogin(false); resetToggle();}
-   
-    useEffect(()=>{setLogin(auth.login); console.log(auth, login);},[auth.login]);
-
 
     const links = (props) =>{
         if(props){
