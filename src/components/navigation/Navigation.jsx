@@ -14,10 +14,9 @@ const Navigation = () => {
 
     const auth = useAuth();
     const authUpdate = useAuthUpdate();
-    const [Login, setLogin] = useState(false);
+    const [Login, setLogin] = useState(auth.login);
 
     let history = useHistory();
-    console.log(auth);
 
     useEffect(()=>{setLogin(auth.login);},[auth]);
 
