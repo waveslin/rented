@@ -1,6 +1,9 @@
 import './Navigation.scss';
-import {useState} from 'react';
-import {Link} from'react-router-dom';
+import axios from 'axios';
+import {useState, useEffect} from 'react';
+import URLS from '../../util/urls';
+import {Link, useHistory} from'react-router-dom';
+import {useAuth, useAuthUpdate} from '../context/Auth.jsx';
 import {useVisibility, useVisibilityUpdate, useVisibilityReset} from '../context/Visibility.jsx'
 
 const Navigation = () => {
@@ -9,8 +12,27 @@ const Navigation = () => {
     const setToggle = useVisibilityUpdate();
     const resetToggle = useVisibilityReset();
 
-    const [login, setLogin] = useState(false);
-    const resetAuth = () => { setLogin(false); resetToggle();}
+    const auth = useAuth();
+    const authUpdate = useAuthUpdate();
+    const [Login, setLogin] = useState(auth.login);
+
+    let history = useHistory();
+
+    useEffect(()=>{setLogin(auth.login);},[auth]);
+
+    const logout = async () => { 
+        // setLogin(false); resetToggle();
+        const res = await axios({
+            method: 'get',
+            url: URLS.LOGOUT,
+        });
+        const login = res.data.login;
+        const token = res.data.token;
+        const rented_account = res.data.rented_account;
+        authUpdate({login, token, rented_account});
+        if(login)
+            history.push("/");
+    }
 
     const links = (props) =>{
         if(props){
@@ -19,7 +41,7 @@ const Navigation = () => {
                     <li><Link to='/dashboard' onClick={resetToggle}>Dashboard</Link></li>
                     <li><Link to='/payment' onClick={resetToggle}>Payment</Link></li>
                     <li><Link to='/account' onClick={resetToggle}>Account</Link></li>
-                    <li><Link to='/' onClick={resetAuth} >Log out</Link></li>
+                    <li><Link to='/' onClick={logout} >Log out</Link></li>
                 </>
             );
         }
@@ -51,7 +73,7 @@ const Navigation = () => {
                     <i className="fas fa-times-circle"></i>
                 </button>
                 <ul className={`nav-list${toggle ? ' hide' : ' show'}`} id="menu" data-test='Navigation-link-list'>
-                    {links(login)}
+                    {links(Login)}
                 </ul>
             </section>
         </nav>

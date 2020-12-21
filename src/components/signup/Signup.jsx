@@ -1,4 +1,8 @@
 import './Signup.scss';
+import axios from 'axios';
+import URLS from '../../util/urls';
+import { useHistory } from "react-router-dom";
+import {useAuthUpdate} from '../context/Auth';
 import {useState, useEffect} from 'react';
 
 const Signup = () =>{
@@ -12,6 +16,10 @@ const Signup = () =>{
     const [password2, setPassword2] = useState("");
     const [dismatch, setDismatch] = useState(false);
 
+    const authUpdate = useAuthUpdate();
+
+    let history = useHistory();
+
     useEffect(()=>{
         if(password !== password2)
             setDismatch(true);
@@ -19,13 +27,41 @@ const Signup = () =>{
             setDismatch(false);
     }, [password, password2]);
 
+    
+    const SignupHandle = e => {
+        e.preventDefault();
+        (async ()=>{
+            const res = await axios({
+                    method: 'post',
+                    url: URLS.SIGNUP,
+                    data: {
+                        firstname, 
+                        lastname, 
+                        email, 
+                        password, 
+                        address, 
+                        apt
+                    },
+                    headers: {'Content-Type': 'application/json'}
+                });
+            const login = res.data.login;
+            const token = res.data.token;
+            const rented_account = res.data.rented_account;
+           authUpdate({login, token, rented_account});
+           if(login)
+            {
+                history.push("/dashboard");
+            }
+        })()
+    }
+
     return (
         <>
         <header className="signup" data-test='Signup-header'>
             <h1><i className="fas fa-user-plus"></i> Sign Up</h1>
         </header>
         <section className="signup">
-            <form action="" data-test='Signup-form'>
+            <form action="" data-test='Signup-form'  onSubmit={SignupHandle}>
                 <div className='signup-input'>
                     <label htmlFor="firstname">First Name</label>
                     <input type="text" name="firstname" id="firstname"  placeholder="First Name"  value={firstname} onChange={e => setFirstname(e.target.value)} />
