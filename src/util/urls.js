@@ -1,4 +1,4 @@
-const PREFIX = 'http://localhost:4500/rented/';
+const PREFIX = 'https://living-f3655a.us1.kinto.io/rented/';
 
 const URLS = {
     SIGNUP: `${PREFIX}signup`,
